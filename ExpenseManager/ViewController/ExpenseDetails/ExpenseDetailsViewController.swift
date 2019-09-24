@@ -10,7 +10,7 @@ protocol ExpenseDetailsViewDelegate: class {
     func expenseObjectValueChange(_ expenseDetailsVC: ExpenseDetailsViewController, expense: Expenses)
 }
 
-class ExpenseDetailsViewController: UIViewController {
+class ExpenseDetailsViewController: BaseViewController {
     
     @IBOutlet weak var expensesTableView: UITableView!
     
@@ -28,6 +28,16 @@ class ExpenseDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupKeyboardObserver()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.removeKeyboradObserver()
     }
     
     func initialSetup() {
