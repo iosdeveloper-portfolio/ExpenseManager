@@ -6,6 +6,9 @@ target 'ExpenseManager' do
   use_frameworks!
 
   # Pods for ExpenseManager
+  pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator'
+  pod 'RappleProgressHUD'
 
   target 'ExpenseManagerTests' do
     inherit! :search_paths
