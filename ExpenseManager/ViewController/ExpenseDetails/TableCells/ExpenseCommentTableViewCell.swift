@@ -27,7 +27,7 @@ class ExpenseCommentTableViewCell: UITableViewCell {
         commentTextView.textColor = UIColor.lightGray
         commentTextView.font = UIFont.systemFont(ofSize: 14)
         commentTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
+        commentTextView.addDoneButtonOnKeyboard()
         editDoneButton.setTitle(LocalizedString.Button.Edit, for: .normal)
     }
 

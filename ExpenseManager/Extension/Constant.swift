@@ -41,5 +41,6 @@ struct LocalizedString {
         static let Apply = "Apply".localized
         static let Edit = "Edit".localized
         static let Save = "Save".localized
+        static let Done = "Done".localized
     }
 }
