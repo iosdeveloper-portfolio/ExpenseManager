@@ -2,3 +2,29 @@
   Localizable.strings
   ExpenseManager
 */
+
+"Error_genric" = "Something went wrong. Please try again.";
+"Error_no_internet" = "No internet connection. Please try again later.";
+
+"Search" = "Search";
+"write_comment" = "Write your comment...";
+
+"Expenses" = "Expenses";
+"Expenses_details" = "Expenses Details";
+"Filter" = "Filter";
+"Alert" = "Alert";
+
+"Loading" = "Loading...";
+"Price_range" = "Price Range";
+"Comment" = "Comment";
+"Receipts" = "Receipts";
+"Receipt" = "Receipt";
+"Price" = "Price";
+"Merchant" = "Merchant";
+"Date" = "Date";
+"Add_receipt" = "Add Receipt";
+
+"Edit" = "Edit";
+"Save" = "Save";
+"Apply" = "Apply";
+"Ok" = "Ok";
