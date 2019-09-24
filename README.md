@@ -17,6 +17,11 @@ ExpenseManager app is showing the user's expense list with date, amount and merc
 - Xcode 10.2+
 - Swift 5.0+
 
+## Installation
+
+- Open terminal and use below command to install cocoapod
+- sudo gem install cocoapods
+
 ## Dependencies
 
 [Alamofire](https://github.com/Alamofire/Alamofire) :- We use Alamofire to perform basic networking tasks like uploading files and requesting data from a third-party RESTful API. This property determines the maximum number of simultaneous connections made to each host by tasks within sessions based on this configuration. 
