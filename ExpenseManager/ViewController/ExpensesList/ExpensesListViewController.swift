@@ -31,7 +31,11 @@ class ExpensesListViewController: UIViewController, ExpenseFilterViewDelegate {
         presenter.attachView(view: self)
         presenter.getExpensesList()
         expensesTableView.separatorStyle = .none
-
+        expensesTableView.pullToRefresh = { ref in
+            if self.presenter.getExpensesList(isPullToRefresh: true) {
+                ref.beginRefreshing()
+            }
+        }
         self.title = LocalizedString.Titles.Expenses
         self.navigationController?.navigationBar.shadowImage = UIImage()
         expensesSearchBar.placeholder = LocalizedString.Placeholder.Search
@@ -123,10 +127,12 @@ extension ExpensesListViewController: ExpensesListView {
             alert.addAction(title: LocalizedString.Button.Ok, style: .default, handler: nil)
             alert.build().show(inView: self)
         }
+        expensesTableView.endRefreshing()
     }
     
     func requestSuccess(withExpenses expenses: [Expenses]) {
         self.filterIfNeeded()
+        expensesTableView.endRefreshing()
     }
 }
 

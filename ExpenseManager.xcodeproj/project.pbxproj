@@ -46,6 +46,7 @@
 		13A06F98233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F93233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift */; };
 		13A06F99233A49A600E62914 /* ExpenseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F94233A49A600E62914 /* ExpenseDetailsTableViewCell.swift */; };
 		13A06F9B233A504B00E62914 /* UITextView+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F9A233A504B00E62914 /* UITextView+Toolbar.swift */; };
+		13A06F9D233A510C00E62914 /* UITableView+RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F9C233A510C00E62914 /* UITableView+RefreshControl.swift */; };
 		237B568E77A2065D8545E716 /* Pods_ExpenseManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99FEBE3B6E979BF807AE7C9 /* Pods_ExpenseManagerTests.framework */; };
 		A6F4ADEC3B0D74A2A3978460 /* Pods_ExpenseManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C42702583514F3D053394B1 /* Pods_ExpenseManager.framework */; };
 		FDE9F85A2EFDFCEF8C6A5BE3 /* Pods_ExpenseManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1F147ABB3A4DAEF7E08D90 /* Pods_ExpenseManagerUITests.framework */; };
@@ -115,6 +116,7 @@
 		13A06F93233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseReceiptsTableViewCell.swift; sourceTree = "<group>"; };
 		13A06F94233A49A600E62914 /* ExpenseDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		13A06F9A233A504B00E62914 /* UITextView+Toolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Toolbar.swift"; sourceTree = "<group>"; };
+		13A06F9C233A510C00E62914 /* UITableView+RefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+RefreshControl.swift"; sourceTree = "<group>"; };
 		50850327D859FB22DDA782B3 /* Pods-ExpenseManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseManagerTests.release.xcconfig"; path = "Target Support Files/Pods-ExpenseManagerTests/Pods-ExpenseManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C42702583514F3D053394B1 /* Pods_ExpenseManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpenseManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5DAD676FA5633D9CAECC0A /* Pods-ExpenseManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseManager.debug.xcconfig"; path = "Target Support Files/Pods-ExpenseManager/Pods-ExpenseManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				13A06F0B233A2B4600E62914 /* UIColor+Extension.swift */,
 				13A06F13233A2BFB00E62914 /* String+Extension.swift */,
 				13A06F7C233A3D3600E62914 /* Date+Extension.swift */,
+				13A06F9C233A510C00E62914 /* UITableView+RefreshControl.swift */,
 				13A06F9A233A504B00E62914 /* UITextView+Toolbar.swift */,
 			);
 			path = Extension;
@@ -633,6 +636,7 @@
 				13A06F98233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift in Sources */,
 				13A06F6D233A3CB900E62914 /* ExpensesListPresenter.swift in Sources */,
 				13A06F97233A49A600E62914 /* ExpenseHeaderCell.swift in Sources */,
+				13A06F9D233A510C00E62914 /* UITableView+RefreshControl.swift in Sources */,
 				13A06F6E233A3CB900E62914 /* ExpensesListProvider.swift in Sources */,
 				13A06F96233A49A600E62914 /* ExpenseCommentTableViewCell.swift in Sources */,
 				13A06F0F233A2B7C00E62914 /* ExpensesListViewController.swift in Sources */,
