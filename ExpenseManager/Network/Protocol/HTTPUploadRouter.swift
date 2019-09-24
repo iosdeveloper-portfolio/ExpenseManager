@@ -21,7 +21,7 @@ extension HTTPUploadRouter {
     }
     
     var url: URL {
-        return URL(string: baseURL + path)!
+        return URL(string: baseURL + "/" + path)!
     }
     
     var parameters: [String: Any]? {
