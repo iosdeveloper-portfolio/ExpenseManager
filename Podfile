@@ -6,7 +6,7 @@ target 'ExpenseManager' do
   use_frameworks!
 
   # Pods for ExpenseManager
-  pod 'Alamofire'
+  pod 'CodableAlamofire'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'RappleProgressHUD'
 
