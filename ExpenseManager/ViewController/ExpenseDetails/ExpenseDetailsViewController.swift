@@ -96,6 +96,7 @@ extension ExpenseDetailsViewController: UITableViewDelegate, UITableViewDataSour
             let cell = tableView.dequeueReusableCell(withClassName: ExpenseReceiptsTableViewCell.self, for: indexPath)
             cell.selectionStyle = .none
             cell.receipts = receipts
+            cell.delegate = self
             return cell
         }
     }
@@ -106,6 +107,7 @@ extension ExpenseDetailsViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 extension ExpenseDetailsViewController: ExpenseDetailsView {
+    
     func requestFailure(withError error: String?) {
         if error?.isValid ?? false {
             let alert = AlertController(alertTitle: LocalizedString.Titles.AlertGeneric, message: error)
@@ -120,6 +122,13 @@ extension ExpenseDetailsViewController: ExpenseDetailsView {
             self.presenter.configureExpense(expense)
             self.delegate?.expenseObjectValueChange(self, expense: expense)
         }
+    }
+    
+    func receiptUploadRequestSuccess(withExpense expense: Expenses) {
+        self.selectedExpense = expense
+        presenter.configureExpense(expense)
+        self.expensesTableView.reloadData()
+        self.delegate?.expenseObjectValueChange(self, expense: expense)
     }
 }
 
@@ -155,6 +164,74 @@ extension ExpenseDetailsViewController: ExpenseCommentEditDoneDelegate {
             if let thisIndexPath = expensesTableView.indexPath(for: cell) {
                 expensesTableView.scrollToRow(at: thisIndexPath, at: .bottom, animated: false)
             }
+        }
+    }
+}
+
+extension ExpenseDetailsViewController: ExpenseReceiptsDelegate {
+    func addReceiptButtonAction(_ addReceiptButton: UIButton) {
+        let alert = AlertController(actionSheetTitle: LocalizedString.Titles.AlertGeneric, message: LocalizedString.Common.SelectMediaTypeMessage)
+        alert.setPopoverPresentationProperties(withSources: .sourceView(addReceiptButton), permittedArrowDirections: .up)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            alert.addAction(title: LocalizedString.Button.Camera, style: .default) { _ in
+                self.checkPermission(withHandler: {
+                    self.getImage(fromSourceType: .camera)
+                })
+            }
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            alert.addAction(title: LocalizedString.Button.Gallery, style: .default) { _ in
+                self.checkPermission(withHandler: {
+                    self.getImage(fromSourceType: .photoLibrary)
+                })
+            }
+        }
+        
+        alert.addAction(title: LocalizedString.Button.Cancel, style: .cancel) { _ in
+            alert.build().dismiss(animated: true, completion: nil)
+        }
+        alert.build().show(inView: self)
+    }
+}
+
+extension ExpenseDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            guard let expense = selectedExpense else { return }
+            presenter.addReceipt(withId: expense.id ?? "", image: selectedImage)
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func checkPermission(withHandler handler: @escaping (() -> ())) {
+        let photos = PHPhotoLibrary.authorizationStatus()
+        switch photos {
+        case .authorized:
+            handler()
+        case .denied, .restricted:
+            let alert = AlertController(alertTitle: LocalizedString.Titles.permission, message: LocalizedString.Common.PhotosAccessPermisionMessage)
+            alert.addAction(title: LocalizedString.Button.Ok, style: .default, handler: nil)
+            alert.build().show(inView: self)
+            break
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({status in
+                self.checkPermission(withHandler: handler)
+            })
+        @unknown default:
+            break
         }
     }
 }

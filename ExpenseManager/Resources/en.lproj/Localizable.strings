@@ -14,6 +14,7 @@
 "Expenses_details" = "Expenses Details";
 "Filter" = "Filter";
 "Alert" = "Alert";
+"Permission" = "Permission";
 
 "Loading" = "Loading...";
 "Price_range" = "Price Range";
@@ -24,8 +25,15 @@
 "Merchant" = "Merchant";
 "Date" = "Date";
 "Add_receipt" = "Add Receipt";
+"Select_media_type" = "Select media type to add receipts";
+"Permision_photos_camera" = "Please enable your device setting for access your photos";
+"Uploading" = "Uploading...";
 
 "Edit" = "Edit";
 "Save" = "Save";
 "Apply" = "Apply";
 "Ok" = "Ok";
+"Photo_gallery" = "Photo Gallery";
+"Take_picture" = "Take a Picture";
+"Cancel" = "Cancel";
+"Done" = "Done";

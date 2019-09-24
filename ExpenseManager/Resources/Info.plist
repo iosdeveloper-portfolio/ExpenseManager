@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>To upload you expense receipt</string>
+    <key>NSCameraUsageDescription</key>
+    <string>To upload you expense receipt</string>
 </dict>
 </plist>

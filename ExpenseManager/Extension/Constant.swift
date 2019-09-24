@@ -18,6 +18,7 @@ struct LocalizedString {
         static let AlertGeneric = "Alert".localized
         static let Filter = "Filter".localized
         static let ExpensesDetails = "Expenses_details".localized
+        static let permission = "Permission".localized
     }
     
     struct Placeholder {
@@ -35,6 +36,9 @@ struct LocalizedString {
         static let Date = "Date".localized
         static let AddReceipt = "Add_receipt".localized
         static let Comment = "Comment".localized
+        static let SelectMediaTypeMessage = "Select_media_type".localized
+        static let PhotosAccessPermisionMessage = "Permision_photos_camera".localized
+        static let Uploading = "Uploading".localized
     }
     
     struct Button {
@@ -43,5 +47,8 @@ struct LocalizedString {
         static let Edit = "Edit".localized
         static let Save = "Save".localized
         static let Done = "Done".localized
+        static let Gallery = "Photo_gallery".localized
+        static let Camera = "Take_picture".localized
+        static let Cancel = "Cancel".localized
     }
 }

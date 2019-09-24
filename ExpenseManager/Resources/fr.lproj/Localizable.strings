@@ -2,3 +2,39 @@
   Localizable.strings
   ExpenseManager
 */
+
+
+"Error_genric" = "Une erreur s'est produite. Veuillez réessayer.";
+"Error_no_internet" = "Pas de connexion Internet. Veuillez réessayer plus tard.";
+"Error_empty_comment" = "Veuillez entrer un commentaire ou une modification";
+
+"Search" = "Recherche";
+"write_comment" = "Écrivez votre commentaire ...";
+
+"Expenses" = "Dépenses";
+"Expenses_details" = "Détails des dépenses";
+"Filter" = "Filtre";
+"Alert" = "Alert";
+"Permission" = "Permission";
+
+"Loading" = "Chargement...";
+"Uploading" = "Téléchargement...";
+"Comment" = "Commentaire";
+"Receipts" = "Reçus";
+"Receipt" = "reçu";
+"Price" = "Prix";
+"Merchant" = "marchand";
+"Date" = "Date";
+"Add_receipt" = "Ajouter un reçu";
+"Select_media_type" = "Sélectionnez le type de support pour ajouter des reçus";
+"Permision_photos_camera" = "Veuillez activer les paramètres de votre appareil pour accéder à vos photos";
+"Price_range" = "Échelle des prix";
+
+"Edit" = "Modifier";
+"Save" = "Enregistrer";
+"Apply" = "Appliquer";
+"Ok" = "Ok";
+"Photo_gallery" = "Galerie de photos";
+"Take_picture" = "Prendre une photo";
+"Cancel" = "Annuler";
+"Done" = "Fait";

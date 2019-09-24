@@ -54,4 +54,17 @@ extension ExpenseDetailsPresenter {
             RappleIndicator.stop()
         })
     }
+    
+    func addReceipt(withId id: String, image: UIImage) {
+        RappleIndicator.start(message: LocalizedString.Common.Uploading)
+        provider?.uploadReceipt(withId: id, receiptImage: image, completion: { (isSuccess, object) in
+            if let expense = object as? Expenses {
+                self.expenseDetailsView?.receiptUploadRequestSuccess(withExpense: expense)
+            }
+            else {
+                self.expenseDetailsView?.requestFailure(withError: object as? String)
+            }
+            RappleIndicator.stop()
+        })
+    }
 }

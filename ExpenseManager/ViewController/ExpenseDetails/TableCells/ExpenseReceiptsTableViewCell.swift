@@ -6,14 +6,26 @@
 import UIKit
 import SDWebImage
 
-class ExpenseReceiptsTableViewCell: UITableViewCell {
+protocol ExpenseReceiptsDelegate: class {
+    func addReceiptButtonAction(_ addReceiptButton: UIButton)
+}
 
+class ExpenseReceiptsTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var addNewReceiptsButton: UIButton!
     @IBOutlet weak var receiptsCollectionView: UICollectionView!
     @IBOutlet weak var receiptsCollectionViewHeightConstaint: NSLayoutConstraint!
     
-    var receipts: [Receipt] = []
+    weak var delegate: ExpenseReceiptsDelegate?
+    fileprivate var selectedImageIndex: Int = 0
+    
+    var receipts: [Receipt] = [] {
+        didSet {
+            receiptsCollectionViewHeightConstaint.constant = receipts.isEmpty ? 0 : 110
+            self.receiptsCollectionView.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,15 +36,15 @@ class ExpenseReceiptsTableViewCell: UITableViewCell {
         receiptsCollectionView.delegate = self
         receiptsCollectionView.dataSource = self
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     @IBAction func addReceiptsButtonAction(_ sender: UIButton) {
-
+        delegate?.addReceiptButtonAction(sender)
     }
 }
 

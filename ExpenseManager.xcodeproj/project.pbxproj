@@ -48,6 +48,9 @@
 		13A06F9B233A504B00E62914 /* UITextView+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F9A233A504B00E62914 /* UITextView+Toolbar.swift */; };
 		13A06F9D233A510C00E62914 /* UITableView+RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F9C233A510C00E62914 /* UITableView+RefreshControl.swift */; };
 		13A06F9F233A56E500E62914 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F9E233A56E500E62914 /* BaseViewController.swift */; };
+		13A06FA1233A58BD00E62914 /* HTTPUploadRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06FA0233A58BD00E62914 /* HTTPUploadRouter.swift */; };
+		13A06FA3233A58C400E62914 /* ImageUploadRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06FA2233A58C400E62914 /* ImageUploadRouter.swift */; };
+		13A06FA5233A58E100E62914 /* MultipartFormDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06FA4233A58E000E62914 /* MultipartFormDataHelper.swift */; };
 		237B568E77A2065D8545E716 /* Pods_ExpenseManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99FEBE3B6E979BF807AE7C9 /* Pods_ExpenseManagerTests.framework */; };
 		A6F4ADEC3B0D74A2A3978460 /* Pods_ExpenseManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C42702583514F3D053394B1 /* Pods_ExpenseManager.framework */; };
 		FDE9F85A2EFDFCEF8C6A5BE3 /* Pods_ExpenseManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1F147ABB3A4DAEF7E08D90 /* Pods_ExpenseManagerUITests.framework */; };
@@ -119,6 +122,9 @@
 		13A06F9A233A504B00E62914 /* UITextView+Toolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Toolbar.swift"; sourceTree = "<group>"; };
 		13A06F9C233A510C00E62914 /* UITableView+RefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+RefreshControl.swift"; sourceTree = "<group>"; };
 		13A06F9E233A56E500E62914 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		13A06FA0233A58BD00E62914 /* HTTPUploadRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUploadRouter.swift; sourceTree = "<group>"; };
+		13A06FA2233A58C400E62914 /* ImageUploadRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploadRouter.swift; sourceTree = "<group>"; };
+		13A06FA4233A58E000E62914 /* MultipartFormDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormDataHelper.swift; sourceTree = "<group>"; };
 		50850327D859FB22DDA782B3 /* Pods-ExpenseManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseManagerTests.release.xcconfig"; path = "Target Support Files/Pods-ExpenseManagerTests/Pods-ExpenseManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C42702583514F3D053394B1 /* Pods_ExpenseManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpenseManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5DAD676FA5633D9CAECC0A /* Pods-ExpenseManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseManager.debug.xcconfig"; path = "Target Support Files/Pods-ExpenseManager/Pods-ExpenseManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -293,6 +299,7 @@
 				13A06F5D233A361100E62914 /* Protocol */,
 				13A06F5C233A361100E62914 /* NetworkManager.swift */,
 				13A06F61233A361100E62914 /* NetworkError.swift */,
+				13A06FA4233A58E000E62914 /* MultipartFormDataHelper.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				13A06F5A233A361100E62914 /* ExpensesRouter.swift */,
+				13A06FA2233A58C400E62914 /* ImageUploadRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				13A06F5E233A361100E62914 /* HTTPRouter.swift */,
+				13A06FA0233A58BD00E62914 /* HTTPUploadRouter.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -626,10 +635,12 @@
 				13A06F6F233A3CB900E62914 /* ExpensesListView.swift in Sources */,
 				13A06F9F233A56E500E62914 /* BaseViewController.swift in Sources */,
 				13A06F7B233A3CE200E62914 /* Expenses.swift in Sources */,
+				13A06FA1233A58BD00E62914 /* HTTPUploadRouter.swift in Sources */,
 				13A06F8D233A491700E62914 /* ExpenseDetailsView.swift in Sources */,
 				13A06F12233A2BD700E62914 /* Constant.swift in Sources */,
 				13A06F56233A335C00E62914 /* ExpenseTableViewCell.swift in Sources */,
 				13A06F7D233A3D3600E62914 /* Date+Extension.swift in Sources */,
+				13A06FA5233A58E100E62914 /* MultipartFormDataHelper.swift in Sources */,
 				13A06F95233A49A600E62914 /* ReceiptsImageCollectionCell.swift in Sources */,
 				13A06F65233A361200E62914 /* NetworkManager.swift in Sources */,
 				13A06F77233A3CE200E62914 /* Amount.swift in Sources */,
@@ -648,6 +659,7 @@
 				13A06F99233A49A600E62914 /* ExpenseDetailsTableViewCell.swift in Sources */,
 				13A06F7A233A3CE200E62914 /* Receipt.swift in Sources */,
 				13A06F8B233A491700E62914 /* ExpenseDetailsProvider.swift in Sources */,
+				13A06FA3233A58C400E62914 /* ImageUploadRouter.swift in Sources */,
 				13A06F78233A3CE200E62914 /* ExpensesResponse.swift in Sources */,
 				13A06F7F233A3DBA00E62914 /* RappleIndicator.swift in Sources */,
 				13A06F66233A361200E62914 /* HTTPRouter.swift in Sources */,

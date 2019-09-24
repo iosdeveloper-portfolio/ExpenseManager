@@ -17,7 +17,7 @@ class NetworkManager {
     init() {
         NetworkActivityIndicatorManager.shared.isEnabled = true
     }
-        
+    
     func makeRequest<T: Decodable>(_ urlRequest: URLRequestConvertible, completion: @escaping (Swift.Result<T, NetworkError>) -> ()) {
         
         Alamofire.request(urlRequest)
@@ -48,6 +48,39 @@ class NetworkManager {
                     completion(.failure(self.generateError(from: error, with: response)))
                 }
             })
+    }
+    
+    //MARK: Alamofire Upload Requests
+    func makeMultipartUploadRequest<T: Decodable>(_ urlRequest: ImageUploadRouter, completion: @escaping (Swift.Result<T, NetworkError>) -> ()) {
+        
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 180
+        
+        manager.upload(multipartFormData: { multipartFormData in
+            multipartFormData.addVideoParameters(withParam: urlRequest.parameters)
+            
+        }, to: urlRequest, method: urlRequest.method, headers: urlRequest.headers, encodingCompletion: { encodingResult in
+            
+            switch encodingResult {
+            case .success(let request, _, _):
+                request.responseDecodableObject(completionHandler: { (response: DataResponse<T>) -> Void in
+                    switch response.result {
+                    case .success(let JSON):
+                        completion(.success(JSON))
+                        
+                    case .failure(let error):
+                        completion(.failure(self.generateError(from: error, with: response)))
+                    }
+                })
+                
+                request.uploadProgress(closure: { (progress) in
+                    debugPrint("Upload Progress: \(progress.fractionCompleted)")
+                })
+                
+            case .failure(let error):
+                completion(.failure(NetworkError.errorString(error.localizedDescription)))
+            }
+        })
     }
     
     fileprivate func error(fromResponseObject responseObject: DataResponse<Any>) -> NetworkError? {
