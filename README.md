@@ -1,5 +1,5 @@
 # ExpenseManager
-ExpenseManager application is showing the User added expense list, with date, amount and merchant name. User also apply the price filter on exoense list and search functionality. On expense details screen showing full details of expense, user can add comment and expense receipt. 
+ExpenseManager app is showing the user's expense list with date, amount and merchant name. User also apply the price filter on expense list and search on it. In details screen it is showing full details of expense, user can add comment and show expense receipt.
 
 ## [Video](https://github.com/iosdeveloper-portfolio/ExpenseManager/raw/master/Screenshorts/AppVideo.MP4)
 
