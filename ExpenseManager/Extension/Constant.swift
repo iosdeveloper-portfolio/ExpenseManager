@@ -20,4 +20,14 @@ struct LocalizedString {
     struct Placeholder {
         static let Search = "Search".localized
     }
+    
+    struct Common {
+        static let Loading = "Loading".localized
+        static let Receipts = "Receipts".localized
+        static let Receipt = "Receipt".localized
+    }
+    
+    struct Button {
+        static let Ok = "Ok".localized
+    }
 }

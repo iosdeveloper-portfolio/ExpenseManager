@@ -7,7 +7,7 @@ import Foundation
 import Alamofire
 
 enum ConfigurationURLs: String {
-    case base = "http://192.168.0.9:3000/"
+    case base = "http://192.168.0.9:3000"
 }
 
 protocol HTTPRouter: URLRequestConvertible {
@@ -26,7 +26,7 @@ extension HTTPRouter {
     }
     
     var url: URL {
-        return URL(string: baseURL + path)!
+        return URL(string: baseURL + "/" + path)!
     }
     
     private var parameters: [String: Any]? {

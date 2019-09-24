@@ -14,7 +14,7 @@ class ExpenseTableViewCell: UITableViewCell {
     @IBOutlet weak var merchantLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var receiptsCountLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -34,11 +34,28 @@ class ExpenseTableViewCell: UITableViewCell {
         containerView.layer.shadowRadius = 3
         containerView.layer.shadowOpacity = 0.3
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
+    }
+    
+    var expense: Expenses? {
+        didSet {
+            userIconLabel.backgroundColor = expense?.randomColor()
+            userIconLabel.text = expense?.user?.initials()
+            
+            userNameLabel.text = expense?.user?.fullName()
+            merchantLabel.text = expense?.merchant?.capitalized
+            currencyLabel.text = expense?.amount?.formated()
+            dateLabel.text = expense?.date?.toDate(form: .genericServer, to: .expensesList)
+            if let receipts = expense?.receipts, !receipts.isEmpty {
+                receiptsCountLabel.text = "\(receipts.count) " + (receipts.count != 1 ? LocalizedString.Common.Receipts : LocalizedString.Common.Receipt)
+            } else {
+                receiptsCountLabel.text = ""
+            }
+        }
     }
     
     override func layoutSubviews() {

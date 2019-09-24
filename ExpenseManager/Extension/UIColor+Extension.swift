@@ -10,6 +10,7 @@ extension UIColor {
     static let appColor = UIColor(rgb: 0xFF3366)
     static let primaryText = UIColor(rgb: 0x000000)
     static let secondryText = UIColor(rgb: 0x444444)
+    static let lightText = UIColor.lightGray
     
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
