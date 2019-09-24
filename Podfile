@@ -10,6 +10,7 @@ target 'ExpenseManager' do
   pod 'AlamofireNetworkActivityIndicator'
   pod 'RappleProgressHUD'
   pod 'RangeSeekSlider'
+  pod 'SDWebImage'
 
   target 'ExpenseManagerTests' do
     inherit! :search_paths

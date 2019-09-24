@@ -36,6 +36,15 @@
 		13A06F7F233A3DBA00E62914 /* RappleIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F7E233A3DBA00E62914 /* RappleIndicator.swift */; };
 		13A06F81233A3E2F00E62914 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F80233A3E2F00E62914 /* AlertController.swift */; };
 		13A06F84233A437A00E62914 /* ExpenseFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F83233A437A00E62914 /* ExpenseFilterViewController.swift */; };
+		13A06F87233A48F700E62914 /* ExpenseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F86233A48F700E62914 /* ExpenseDetailsViewController.swift */; };
+		13A06F8B233A491700E62914 /* ExpenseDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F88233A491700E62914 /* ExpenseDetailsProvider.swift */; };
+		13A06F8C233A491700E62914 /* ExpenseDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F89233A491700E62914 /* ExpenseDetailsPresenter.swift */; };
+		13A06F8D233A491700E62914 /* ExpenseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F8A233A491700E62914 /* ExpenseDetailsView.swift */; };
+		13A06F95233A49A600E62914 /* ReceiptsImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F8F233A49A600E62914 /* ReceiptsImageCollectionCell.swift */; };
+		13A06F96233A49A600E62914 /* ExpenseCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F91233A49A600E62914 /* ExpenseCommentTableViewCell.swift */; };
+		13A06F97233A49A600E62914 /* ExpenseHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F92233A49A600E62914 /* ExpenseHeaderCell.swift */; };
+		13A06F98233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F93233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift */; };
+		13A06F99233A49A600E62914 /* ExpenseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F94233A49A600E62914 /* ExpenseDetailsTableViewCell.swift */; };
 		237B568E77A2065D8545E716 /* Pods_ExpenseManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99FEBE3B6E979BF807AE7C9 /* Pods_ExpenseManagerTests.framework */; };
 		A6F4ADEC3B0D74A2A3978460 /* Pods_ExpenseManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C42702583514F3D053394B1 /* Pods_ExpenseManager.framework */; };
 		FDE9F85A2EFDFCEF8C6A5BE3 /* Pods_ExpenseManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1F147ABB3A4DAEF7E08D90 /* Pods_ExpenseManagerUITests.framework */; };
@@ -95,6 +104,15 @@
 		13A06F7E233A3DBA00E62914 /* RappleIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RappleIndicator.swift; sourceTree = "<group>"; };
 		13A06F80233A3E2F00E62914 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		13A06F83233A437A00E62914 /* ExpenseFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseFilterViewController.swift; sourceTree = "<group>"; };
+		13A06F86233A48F700E62914 /* ExpenseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsViewController.swift; sourceTree = "<group>"; };
+		13A06F88233A491700E62914 /* ExpenseDetailsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsProvider.swift; sourceTree = "<group>"; };
+		13A06F89233A491700E62914 /* ExpenseDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsPresenter.swift; sourceTree = "<group>"; };
+		13A06F8A233A491700E62914 /* ExpenseDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsView.swift; sourceTree = "<group>"; };
+		13A06F8F233A49A600E62914 /* ReceiptsImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptsImageCollectionCell.swift; sourceTree = "<group>"; };
+		13A06F91233A49A600E62914 /* ExpenseCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCommentTableViewCell.swift; sourceTree = "<group>"; };
+		13A06F92233A49A600E62914 /* ExpenseHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseHeaderCell.swift; sourceTree = "<group>"; };
+		13A06F93233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseReceiptsTableViewCell.swift; sourceTree = "<group>"; };
+		13A06F94233A49A600E62914 /* ExpenseDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		50850327D859FB22DDA782B3 /* Pods-ExpenseManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseManagerTests.release.xcconfig"; path = "Target Support Files/Pods-ExpenseManagerTests/Pods-ExpenseManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C42702583514F3D053394B1 /* Pods_ExpenseManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpenseManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5DAD676FA5633D9CAECC0A /* Pods-ExpenseManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseManager.debug.xcconfig"; path = "Target Support Files/Pods-ExpenseManager/Pods-ExpenseManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +212,7 @@
 			children = (
 				13A06F0D233A2B6000E62914 /* ExpensesList */,
 				13A06F82233A437A00E62914 /* ExpenseFilter */,
+				13A06F85233A48D300E62914 /* ExpenseDetails */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -311,6 +330,38 @@
 				13A06F83233A437A00E62914 /* ExpenseFilterViewController.swift */,
 			);
 			path = ExpenseFilter;
+			sourceTree = "<group>";
+		};
+		13A06F85233A48D300E62914 /* ExpenseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				13A06F8E233A49A600E62914 /* CollectionCells */,
+				13A06F90233A49A600E62914 /* TableCells */,
+				13A06F89233A491700E62914 /* ExpenseDetailsPresenter.swift */,
+				13A06F88233A491700E62914 /* ExpenseDetailsProvider.swift */,
+				13A06F8A233A491700E62914 /* ExpenseDetailsView.swift */,
+				13A06F86233A48F700E62914 /* ExpenseDetailsViewController.swift */,
+			);
+			path = ExpenseDetails;
+			sourceTree = "<group>";
+		};
+		13A06F8E233A49A600E62914 /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				13A06F8F233A49A600E62914 /* ReceiptsImageCollectionCell.swift */,
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		13A06F90233A49A600E62914 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				13A06F91233A49A600E62914 /* ExpenseCommentTableViewCell.swift */,
+				13A06F92233A49A600E62914 /* ExpenseHeaderCell.swift */,
+				13A06F93233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift */,
+				13A06F94233A49A600E62914 /* ExpenseDetailsTableViewCell.swift */,
+			);
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 		448BA230CFC87651EA56DDC0 /* Pods */ = {
@@ -561,21 +612,30 @@
 			files = (
 				13A06F84233A437A00E62914 /* ExpenseFilterViewController.swift in Sources */,
 				13A06F0C233A2B4600E62914 /* UIColor+Extension.swift in Sources */,
+				13A06F8C233A491700E62914 /* ExpenseDetailsPresenter.swift in Sources */,
+				13A06F87233A48F700E62914 /* ExpenseDetailsViewController.swift in Sources */,
 				13A06F6F233A3CB900E62914 /* ExpensesListView.swift in Sources */,
 				13A06F7B233A3CE200E62914 /* Expenses.swift in Sources */,
+				13A06F8D233A491700E62914 /* ExpenseDetailsView.swift in Sources */,
 				13A06F12233A2BD700E62914 /* Constant.swift in Sources */,
 				13A06F56233A335C00E62914 /* ExpenseTableViewCell.swift in Sources */,
 				13A06F7D233A3D3600E62914 /* Date+Extension.swift in Sources */,
+				13A06F95233A49A600E62914 /* ReceiptsImageCollectionCell.swift in Sources */,
 				13A06F65233A361200E62914 /* NetworkManager.swift in Sources */,
 				13A06F77233A3CE200E62914 /* Amount.swift in Sources */,
 				13A06F81233A3E2F00E62914 /* AlertController.swift in Sources */,
 				13A06F19233A2DAB00E62914 /* Storyboard.swift in Sources */,
 				13A06F79233A3CE200E62914 /* User.swift in Sources */,
+				13A06F98233A49A600E62914 /* ExpenseReceiptsTableViewCell.swift in Sources */,
 				13A06F6D233A3CB900E62914 /* ExpensesListPresenter.swift in Sources */,
+				13A06F97233A49A600E62914 /* ExpenseHeaderCell.swift in Sources */,
 				13A06F6E233A3CB900E62914 /* ExpensesListProvider.swift in Sources */,
+				13A06F96233A49A600E62914 /* ExpenseCommentTableViewCell.swift in Sources */,
 				13A06F0F233A2B7C00E62914 /* ExpensesListViewController.swift in Sources */,
 				13A06F69233A361200E62914 /* NetworkError.swift in Sources */,
+				13A06F99233A49A600E62914 /* ExpenseDetailsTableViewCell.swift in Sources */,
 				13A06F7A233A3CE200E62914 /* Receipt.swift in Sources */,
+				13A06F8B233A491700E62914 /* ExpenseDetailsProvider.swift in Sources */,
 				13A06F78233A3CE200E62914 /* ExpensesResponse.swift in Sources */,
 				13A06F7F233A3DBA00E62914 /* RappleIndicator.swift in Sources */,
 				13A06F66233A361200E62914 /* HTTPRouter.swift in Sources */,

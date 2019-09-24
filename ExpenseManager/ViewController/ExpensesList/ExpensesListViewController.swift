@@ -108,6 +108,12 @@ extension ExpensesListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let expenseDetailsVc = Storyboard.Main.instantiateViewController(withClass: ExpenseDetailsViewController.self)
+        expenseDetailsVc.selectedExpense = presenter.filterExpenses[indexPath.row]
+        self.navigationController?.pushViewController(expenseDetailsVc, animated: true)
+    }
 }
 
 extension ExpensesListViewController: ExpensesListView {
