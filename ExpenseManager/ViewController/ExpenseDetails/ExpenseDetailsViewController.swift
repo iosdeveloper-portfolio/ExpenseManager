@@ -53,6 +53,7 @@ extension ExpenseDetailsViewController: UITableViewDelegate, UITableViewDataSour
         case .header:
             let cell = tableView.dequeueReusableCell(withClassName: ExpenseHeaderCell.self, for: indexPath)
             cell.selectionStyle = .none
+            cell.expense = expense
             return cell
             
         case .list(let title, let value):

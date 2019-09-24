@@ -11,6 +11,15 @@ class ExpenseHeaderCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    var expense: Expenses? {
+        didSet {
+            userIconLabel.backgroundColor = expense?.randomColor()
+            userIconLabel.text = expense?.user?.initials()
+            userNameLabel.text = expense?.user?.fullName()
+            emailLabel.text = expense?.user?.email
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
