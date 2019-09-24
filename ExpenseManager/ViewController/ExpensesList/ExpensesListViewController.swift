@@ -116,6 +116,7 @@ extension ExpensesListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let expenseDetailsVc = Storyboard.Main.instantiateViewController(withClass: ExpenseDetailsViewController.self)
         expenseDetailsVc.selectedExpense = presenter.filterExpenses[indexPath.row]
+        expenseDetailsVc.delegate = self
         self.navigationController?.pushViewController(expenseDetailsVc, animated: true)
     }
 }
@@ -133,6 +134,18 @@ extension ExpensesListViewController: ExpensesListView {
     func requestSuccess(withExpenses expenses: [Expenses]) {
         self.filterIfNeeded()
         expensesTableView.endRefreshing()
+    }
+}
+
+extension ExpensesListViewController: ExpenseDetailsViewDelegate {
+    func expenseObjectValueChange(_ expenseDetailsVC: ExpenseDetailsViewController, expense: Expenses) {
+        let index = self.presenter.expenses.firstIndex { (ex) -> Bool in
+            return ex.id == expense.id
+        }
+        if let i = index {
+            self.presenter.expenses[i] = expense
+            self.filterIfNeeded()
+        }
     }
 }
 

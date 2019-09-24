@@ -10,6 +10,7 @@ struct LocalizedString {
     struct Errors {
         static let genericError = "Error_genric".localized
         static let networkUnreachableError  = "Error_no_internet".localized
+        static let enterComment = "Error_empty_comment".localized
     }
     
     struct Titles {

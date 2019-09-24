@@ -39,3 +39,19 @@ class ExpenseDetailsPresenter {
         sectionTypes.append(.receipts(receipts: expense.receipts ?? []))
     }
 }
+
+extension ExpenseDetailsPresenter {
+    
+    func updateComment(withId id: String, comment: String) {
+        RappleIndicator.start(message: LocalizedString.Common.Loading)
+        provider?.updateComment(withId: id, comment: comment, completion: { (isSuccess, object) in
+            if let expense = object as? Expenses {
+                self.expenseDetailsView?.updateCommentRequestSuccess(withExpense: expense)
+            }
+            else {
+                self.expenseDetailsView?.requestFailure(withError: object as? String)
+            }
+            RappleIndicator.stop()
+        })
+    }
+}

@@ -9,11 +9,14 @@ import Alamofire
 public enum ExpensesRouter: HTTPRouter {
     
     case expensesList(limit: Int, offset: Int)
+    case addExpenseComment(id: String, comment: String)
     
     internal var method: HTTPMethod {
         switch self {
         case .expensesList:
             return .get
+        case .addExpenseComment:
+            return .post
         }
     }
     
@@ -21,6 +24,8 @@ public enum ExpensesRouter: HTTPRouter {
         switch self {
         case .expensesList:
             return "expenses"
+        case .addExpenseComment(let id, _):
+            return "expenses/\(id)"
         }
     }
     
@@ -31,6 +36,8 @@ public enum ExpensesRouter: HTTPRouter {
                 "limit": limit,
                 "offset": offset
             ]
+        case .addExpenseComment(_, let comment):
+            return ["comment": comment]
         }
     }
     
@@ -38,6 +45,8 @@ public enum ExpensesRouter: HTTPRouter {
         switch self {
         case .expensesList:
             return try URLEncoding.queryString.encode(request, with: parameters)
+        case .addExpenseComment:
+            return try URLEncoding.default.encode(request, with: parameters)
         }
     }
 }

@@ -343,9 +343,9 @@
 			children = (
 				13A06F8E233A49A600E62914 /* CollectionCells */,
 				13A06F90233A49A600E62914 /* TableCells */,
-				13A06F89233A491700E62914 /* ExpenseDetailsPresenter.swift */,
 				13A06F88233A491700E62914 /* ExpenseDetailsProvider.swift */,
 				13A06F8A233A491700E62914 /* ExpenseDetailsView.swift */,
+				13A06F89233A491700E62914 /* ExpenseDetailsPresenter.swift */,
 				13A06F86233A48F700E62914 /* ExpenseDetailsViewController.swift */,
 			);
 			path = ExpenseDetails;
