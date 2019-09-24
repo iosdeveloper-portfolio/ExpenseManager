@@ -5,13 +5,18 @@
 
 import UIKit
 
-class ExpensesListViewController: UIViewController {
+class ExpensesListViewController: UIViewController, ExpenseFilterViewDelegate {
     
     @IBOutlet weak var expensesTableView: UITableView!
     @IBOutlet weak var expensesSearchBar: UISearchBar!
     
     let presenter = ExpensesListPresenter(provider: ExpensesListProvider(), objectLimit: 30)
-
+    var filterTypes: [ExpenseFilterTypes] = [] {
+        didSet {
+            self.filterIfNeeded()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
@@ -26,6 +31,7 @@ class ExpensesListViewController: UIViewController {
         presenter.attachView(view: self)
         presenter.getExpensesList()
         expensesTableView.separatorStyle = .none
+
         self.title = LocalizedString.Titles.Expenses
         self.navigationController?.navigationBar.shadowImage = UIImage()
         expensesSearchBar.placeholder = LocalizedString.Placeholder.Search
@@ -52,6 +58,22 @@ class ExpensesListViewController: UIViewController {
             })
         } else {
             presenter.filterExpenses = presenter.expenses
+        }
+        
+        for type in filterTypes {
+            presenter.filterExpenses = presenter.filterExpenses.filter { (expense) -> Bool in
+                switch type {
+                case .price(let min, let max):
+                    if let amount = Double(expense.amount?.value ?? "") {
+                        return min < CGFloat(amount) && max > CGFloat(amount)
+                    }
+                }
+                return false
+            }
+        }
+        
+        if presenter.filterExpenses.count == 0 {
+            presenter.getExpensesList()
         }
         
         self.expensesTableView.reloadData()
@@ -109,7 +131,9 @@ extension ExpensesListViewController: UISearchBarDelegate {
     }
     
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-        
+        let expenseFilterVc = Storyboard.Main.instantiateViewController(withClass: ExpenseFilterViewController.self)
+        expenseFilterVc.delegate = self
+        self.navigationController?.pushViewController(expenseFilterVc, animated: true)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

@@ -15,6 +15,7 @@ struct LocalizedString {
     struct Titles {
         static let Expenses = "Expenses".localized
         static let AlertGeneric = "Alert".localized
+        static let Filter = "Filter".localized
     }
     
     struct Placeholder {
@@ -25,9 +26,11 @@ struct LocalizedString {
         static let Loading = "Loading".localized
         static let Receipts = "Receipts".localized
         static let Receipt = "Receipt".localized
+        static let PriceRange = "Price_range".localized
     }
     
     struct Button {
         static let Ok = "Ok".localized
+        static let Apply = "Apply".localized
     }
 }

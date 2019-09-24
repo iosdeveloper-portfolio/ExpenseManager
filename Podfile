@@ -9,6 +9,7 @@ target 'ExpenseManager' do
   pod 'CodableAlamofire'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'RappleProgressHUD'
+  pod 'RangeSeekSlider'
 
   target 'ExpenseManagerTests' do
     inherit! :search_paths
