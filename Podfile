@@ -11,6 +11,7 @@ target 'ExpenseManager' do
   pod 'RappleProgressHUD'
   pod 'RangeSeekSlider'
   pod 'SDWebImage'
+  pod 'DTPhotoViewerController'
 
   target 'ExpenseManagerTests' do
     inherit! :search_paths

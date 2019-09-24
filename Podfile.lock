@@ -4,6 +4,7 @@ PODS:
     - Alamofire (~> 4.8)
   - CodableAlamofire (1.1.1):
     - Alamofire (~> 4.0)
+  - DTPhotoViewerController (3.0.2)
   - RangeSeekSlider (1.8.0)
   - RappleProgressHUD (3.0.4)
   - SDWebImage (5.1.1):
@@ -13,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireNetworkActivityIndicator
   - CodableAlamofire
+  - DTPhotoViewerController
   - RangeSeekSlider
   - RappleProgressHUD
   - SDWebImage
@@ -22,6 +24,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireNetworkActivityIndicator
     - CodableAlamofire
+    - DTPhotoViewerController
     - RangeSeekSlider
     - RappleProgressHUD
     - SDWebImage
@@ -30,10 +33,11 @@ SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   AlamofireNetworkActivityIndicator: 9acc3de3ca6645bf0efed462396b0df13dd3e7b8
   CodableAlamofire: b587c1198562824abb1f468aed34feb00d6cecd8
+  DTPhotoViewerController: 20501ce30cbb7ef981c5adcc024bc4f3e6e63f1a
   RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   RappleProgressHUD: c57f20ee8e2965c6107aaf76b97ed0f33f00bc1d
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
 
-PODFILE CHECKSUM: fe5f37e4cfca98916837b761084696079963df37
+PODFILE CHECKSUM: 955eb4de0a6e8d402d08638d1a8c3522709d56b3
 
 COCOAPODS: 1.7.5
