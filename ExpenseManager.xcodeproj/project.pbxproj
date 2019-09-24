@@ -19,6 +19,7 @@
 		13A06F12233A2BD700E62914 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F11233A2BD700E62914 /* Constant.swift */; };
 		13A06F14233A2BFB00E62914 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F13233A2BFB00E62914 /* String+Extension.swift */; };
 		13A06F19233A2DAB00E62914 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F18233A2DAB00E62914 /* Storyboard.swift */; };
+		13A06F56233A335C00E62914 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A06F55233A335C00E62914 /* ExpenseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		13A06F11233A2BD700E62914 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		13A06F13233A2BFB00E62914 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		13A06F18233A2DAB00E62914 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		13A06F55233A335C00E62914 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		13A06F0D233A2B6000E62914 /* ExpensesList */ = {
 			isa = PBXGroup;
 			children = (
+				13A06F54233A335C00E62914 /* TableViewCell */,
 				13A06F0E233A2B7C00E62914 /* ExpensesListViewController.swift */,
 			);
 			path = ExpensesList;
@@ -187,6 +190,14 @@
 				13A06F18233A2DAB00E62914 /* Storyboard.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		13A06F54233A335C00E62914 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				13A06F55233A335C00E62914 /* ExpenseTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +335,7 @@
 			files = (
 				13A06F0C233A2B4600E62914 /* UIColor+Extension.swift in Sources */,
 				13A06F12233A2BD700E62914 /* Constant.swift in Sources */,
+				13A06F56233A335C00E62914 /* ExpenseTableViewCell.swift in Sources */,
 				13A06F19233A2DAB00E62914 /* Storyboard.swift in Sources */,
 				13A06F0F233A2B7C00E62914 /* ExpensesListViewController.swift in Sources */,
 				13A06F14233A2BFB00E62914 /* String+Extension.swift in Sources */,
