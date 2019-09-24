@@ -1,5 +1,12 @@
 # ExpenseManager
+ExpenseManager application is showing the User added expense list, with date, amount and merchant name. User also apply the price filter on exoense list and search functionality. On expense details screen showing full details of expense, user can add comment and expense receipt. 
 
+<div align="center">
+<img height=533 width=300 src="./Screenshorts/1.Launch.png" />
+<img height=533 width=300 src="./Screenshorts/2.list.png" />
+<img height=533 width=300 src="./Screenshorts/3.filter.png" />
+<img height=533 width=300 src="./Screenshorts/4.details.png" />
+</div>
 
 ## Requirements
 
